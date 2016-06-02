@@ -1,0 +1,43 @@
+<include file="Public/header" />
+<div class="col-lg-12 col-sm-12 row">
+    <div><a href="{:U('admin/blog/add')}" class="btn">新增</a></div>
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td>标题</td>
+            <!--<td>内容</td>-->
+            <td>图片</td>
+            <td>作者</td>
+            <td>阅读量</td>
+            <td>描述</td>
+            <td>分类ID</td>
+            <td>创建时间</td>
+            <td>修改时间</td>
+            <td>操作</td>
+        </tr>
+        <foreach name="blog" item="vo">
+        <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.title}</td>
+            <!--<td>{$vo.content|htmlspecialchars_decode}</td>-->
+            <td><img src="__PUBLIC__/{$vo.pic}" alt="" width="100px" height="100px"></td>
+            <td>{$vo.author}</td>
+            <td>{$vo.read_num}</td>
+            <td>{$vo.description}</td>
+            <td>{$vo.categroy_id}</td>
+            <td>{$vo.create_time|date="Y-m-d H:i:s",###}</td>
+            <td>{$vo.update_time}</td>
+            <td>
+                <a href="{:U('admin/blog/update',array('id'=>$vo['id']))}">修改</a>
+                <a href="{:U('admin/blog/del',array('id'=>$vo['id']))}">删除</a>
+            </td>
+        </tr>
+        </foreach>
+    </table>
+    <div class="page">{$page}</div>
+</div>
+<style>
+.page .current{background-color:rgba(0,255,150,0.5);}
+.page .prev,.num,.next,.current{width:auto;height:auto;margin:4px;padding:3px 3px;box-shadow:0 0 2px rgba(0,0,0,0.2);background-color:rgba(255,255,255,0.1);}
+</style>
+<include file="Public/footer" />

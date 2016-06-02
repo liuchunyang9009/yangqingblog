@@ -1,0 +1,36 @@
+<include file="Public/header" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>UMEDITOR 完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="__PUBLIC__/vendor/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/vendor/umeditor/third-party/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/vendor/umeditor/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/vendor/umeditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/vendor/umeditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<div class="col-lg-12 col-sm-12 row">
+    <form action="{:U('admin/blog/handleUpdate')}" method="post"enctype="multipart/form-data">
+    	标题: <input type="text" name="title" value="{$blog['title']}"><br>
+        内容: <script type="text/plain" name="content" id="myEditor" 
+             style="width:1000px;height:240px;">
+             {$blog.content|htmlspecialchars_decode}
+             </script>
+        图像: <input type="file" name="pic" value="{$blog['pic']}"><br>
+        作者: <input type="text" name="author" value="{$blog['author']}"><br>
+        描述: <textarea cols="30" rows="5" name="description"> {$blog['description']}</textarea><br>
+        分类: <select name="categroy_id">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              </select><br>
+              <input type="hidden" name="id" value="{$blog['id']}">
+              <input type="submit">
+    </form>
+    <script type="text/javascript">
+        var um = UM.getEditor('myEditor');
+    </script>
+</div>
+<include file="Public/footer" />
