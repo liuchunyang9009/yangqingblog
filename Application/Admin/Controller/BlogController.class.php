@@ -14,17 +14,25 @@ class BlogController extends Controller {
         $show       = $Page->show();// 分页显示输出
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
 		$list = $blog->limit($Page->firstRow.','.$Page->listRows)->select();
-		$this->assign('blog',$list);// 赋值数据集
+        $this->assign('blog',$list);// 赋值数据集
 		$this->assign('page',$show);// 赋值分页输出
 		$this->display(); // 输出模板
     }
     public function add(){
+        $category = M('category');
+        $category_info=$category->select();
+        $list=getTree($category_info);
+        var_dump($list);die();
+        $this->assign('category',$list);
     	$this->display();
     }
     public function handleAdd(){
     	$pic = uploadFile('pic');
     	$_POST['pic'] = $pic;
 		$_POST['create_time'] = time();
+        $category = M('category');
+        $category_info=$category->where("id={$_POST['categroy_id']}")->find();
+        $_POST['parent_categroy_id']=$category_info['parent_id'];
     	M('blog')->create();
     	M('blog')->add();
     	$this->success('新增成功',U('admin/blog/index'));
