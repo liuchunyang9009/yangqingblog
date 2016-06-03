@@ -37,8 +37,8 @@ class ImageController extends Controller
     }
     function handleUpdate(){
         $id = I('post.id',0);
-        if ($_FILES['pic']['content']) {
-            uploadFile('pic');
+        if ($_FILES['pic']) {
+            $pic = uploadFile('pic');
             $_POST['pic'] = $pic;
         }
         $_POST['update_time'] = time();

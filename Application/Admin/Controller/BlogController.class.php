@@ -22,7 +22,7 @@ class BlogController extends Controller {
         $category = M('category');
         $category_info=$category->select();
         $list=getTree($category_info);
-        var_dump($list);die();
+       
         $this->assign('category',$list);
     	$this->display();
     }

@@ -10,39 +10,26 @@
 				</h1>
 			</header>
 		</article>
+		<foreach name="gossip" item="vo">
 		<div class="mainBody">
 			<div class="mainBody_left">
 				<p class="clearfix">
-					<img src="__PUBLIC__/home/images/left_img.jpg">
-					<span>生活的坑都是自己挖的！譬如，听别人讲话，听到最后，耳朵里只会记住两类话：最愿意听的和最不愿意听的。然后，喜欢听的未必化成快乐，但不喜欢听的一定化成了痛苦，其他的都化成了风。</span>
+					<img src="__PUBLIC__/{$vo.pic}">
+					<span>{$vo.content}</span>
 				</p>
 				<div class="dot"></div>
-				<div class="dateview">2015-02-01</div>
+				<div class="dateview">{$vo.create_time|date="Y-m-d",###}</div>
 				<div class="triangle"></div>
 			</div>
 		</div>
-		<div class="mainBody">
-			<div class="mainBody_left">
-				<p class="clearfix">
-					<img src="__PUBLIC__/home/images/left_img.jpg">
-					<span>生活的坑都是自己挖的！譬如，听别人讲话，听到最后，耳朵里只会记住两类话：最愿意听的和最不愿意听的。然后，喜欢听的未必化成快乐，但不喜欢听的一定化成了痛苦，其他的都化成了风。</span>
-				</p>
-				<div class="dot"></div>
-				<div class="dateview">2015-02-01</div>
-				<div class="triangle"></div>
-			</div>
-		</div>
-		<div class="mainBody">
-			<div class="mainBody_left">
-				<p class="clearfix">
-					<img src="__PUBLIC__/home/images/left_img.jpg">
-					<span>生活的坑都是自己挖的！譬如，听别人讲话，听到最后，耳朵里只会记住两类话：最愿意听的和最不愿意听的。然后，喜欢听的未必化成快乐，但不喜欢听的一定化成了痛苦，其他的都化成了风。</span>
-				</p>
-				<div class="dot"></div>
-				<div class="dateview">2015-02-01</div>
-				<div class="triangle"></div>
-			</div>
-		</div>
+		</foreach>
+		         <div class="page">{$page}</div>
+      
+</div>
+<style>
+.page .current{background-color:rgba(0,255,150,0.5);}
+.page .prev,.num,.next,.current{width:auto;height:auto;margin:4px;padding:3px 3px;box-shadow:0 0 2px rgba(0,0,0,0.2);background-color:rgba(255,255,255,0.1);}
+</style>
 	</div>
 	<script type="text/javascript">
 	$(function(){

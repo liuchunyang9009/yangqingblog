@@ -6,7 +6,7 @@ class NavigationController extends Controller
     public function index(){
         $Images = M('category'); // 实例化Images对象
         $count      = $Images->count();// 查询满足要求的总记录数
-        $Page       = new \Think\Page($count,5);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $Page       = new \Think\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数(25)
         $Page->setConfig('prev',"上一页");
         $Page->setConfig('next','下一页');
         $Page->setConfig('header','<span class="rows">共 %TOTAL_ROW% 条记录</span>');
