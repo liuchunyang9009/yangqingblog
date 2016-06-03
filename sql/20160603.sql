@@ -16,37 +16,28 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`blog` /*!40100 DEFAULT CHARACTER SET ut
 
 USE `blog`;
 
-/*Table structure for table `zt_category` */
+/*Table structure for table `zt_blog` */
 
-DROP TABLE IF EXISTS `zt_category`;
+DROP TABLE IF EXISTS `zt_blog`;
 
-CREATE TABLE `zt_category` (
+CREATE TABLE `zt_blog` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL DEFAULT '' COMMENT '名称',
-  `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT '父id',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
-
-/*Data for the table `zt_category` */
-
-insert  into `zt_category`(`id`,`name`,`parent_id`) values (1,'慢生活',0),(2,'日记',1),(3,'欣赏',1),(4,'程序人生',1),(5,'经典语录',1),(7,'学无止境',0),(8,'心得笔记',7),(9,'IP查询',7),(10,'CSS3|Html5',7),(11,'网站建设',7),(12,'JS经典实例',7),(13,'推荐工具',7);
-
-/*Table structure for table `zt_doing` */
-
-DROP TABLE IF EXISTS `zt_doing`;
-
-CREATE TABLE `zt_doing` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `content` varchar(1000) NOT NULL DEFAULT '' COMMENT '内容',
-  `pic` varchar(50) NOT NULL DEFAULT '' COMMENT '缩略图',
+  `title` varchar(50) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',
+  `pic` varchar(50) NOT NULL DEFAULT '' COMMENT '图片',
+  `author` varchar(10) NOT NULL DEFAULT '' COMMENT '作者',
+  `read_num` int(11) NOT NULL DEFAULT '0' COMMENT '访问次数',
+  `description` varchar(500) NOT NULL DEFAULT '' COMMENT '描述',
+  `parent_categroy_id` int(11) NOT NULL DEFAULT '0' COMMENT '父类ID',
+  `categroy_id` int(11) NOT NULL DEFAULT '0' COMMENT '分类id',
   `create_time` int(11) NOT NULL DEFAULT '0' COMMENT '创建时间',
-  `upate_time` int(11) NOT NULL DEFAULT '0' COMMENT '修改时间',
+  `uodate_time` int(11) NOT NULL DEFAULT '0' COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-/*Data for the table `zt_doing` */
+/*Data for the table `zt_blog` */
 
-insert  into `zt_doing`(`id`,`content`,`pic`,`create_time`,`upate_time`) values (2,'生活的坑都是自己挖的！譬如，听别人讲话，听到最后，耳朵里只会记住两类话：最愿意听的和最不愿意听的。然后，喜欢听的未必化成快乐，但不喜欢听的一定化成了痛苦，其他的都化成了风。','upload/2016-06-03/57510c0e7c962.jpg',1464847022,0),(3,'有一天当你发现疏远和拉黑的可能是曾经最聊得来的朋友；背后指责你说你不好的可能是你过去最亲密的伙伴；出手阻碍你的或许是你当初的合伙人；你才会明白，这个世界没有什么是不变的，这个时代，因为利益会有许多人做出许多你想不到的事。沙里淘金后，你才知道原来身边一直对你好的人有多珍贵。','upload/2016-06-03/575108bf20eb7.jpg',1464928447,0),(4,'汉语版：圣诞快乐！ 闵南语：心蛋快裸！ 江西版：生蛋快落！ 英文版：哈皮克瑞死么死！ 俄语版：买个萝卜切吧切吧炖了吧 韩语版：空起哇 撒起哇 哭死米塔 日文版：锅你得洗哇 碗你得洗哇 盆你得洗哇 锅碗盆你得洗哇～','upload/2016-06-03/575108d0571d8.jpg',1464928464,0),(5,'时隔多年，本来以为已经豪不介怀，当真正的真相被揭开，却再也找不着可以原谅的理由','upload/2016-06-03/575108e1569ec.jpg',1464928481,0);
+insert  into `zt_blog`(`id`,`title`,`content`,`pic`,`author`,`read_num`,`description`,`parent_categroy_id`,`categroy_id`,`create_time`,`uodate_time`) values (1,'IP要突破2000+了','&lt;p&gt;&lt;span style=&quot;color: rgb(102, 102, 102); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 28px; text-indent: 28px; white-space: normal;&quot;&gt;很久都没有更新网站了，现在得空看了下网站怎么样了，没有想到，百度权重4,PR3,访问IP也在上升，一年的时间没有更新，看来一次性做好一个网站很有必要，这回一劳永逸了 。。。。不过，我还是得更新模板，要不然损失好些老朋友呢&lt;/span&gt;&lt;img src=&quot;http://yangqing.com/Public/vendor/umeditor/php/upload/20160603/14649446131411.jpg&quot; _src=&quot;http://yangqing.com/Public/vendor/umeditor/php/upload/20160603/14649446131411.jpg&quot;/&gt;&lt;/p&gt;','upload/2016-06-03/5751482fae8eb.jpg','杨青',0,'  很久都没有更新网站了，现在得空看了下网站怎么样了，没有想到，百度权重4,PR3,访问IP也在上升，一年的时间没有更新，看来一次性做好一个网站很有必要，这回一劳永逸了 。。hahaha。。不过，我还是得更新模板，要不然损失好些老朋友呢\r\n              ',1,2,1464944632,0),(2,'【孕期日记】生活本该如此','&lt;ul class=&quot;infos&quot; style=&quot;margin: 20px 30px 20px 0px; padding: 0px; list-style: none; overflow: hidden; line-height: 28px; font-size: 14px; text-indent: 2em; color: rgb(102, 102, 102); font-family: 宋体, Arial, Helvetica, sans-serif; white-space: normal;&quot;&gt;&lt;p style=&quot;margin-top: 0px; padding: 0px;&quot;&gt;这是第一篇2015年的生活日记，我的这个博客也因为孕期给耽搁了不少，要不然每个月都能出一两套模板，或者定时更新一些技术文章，群里面也很少参与讨论。现在因为这个即将到来的小家伙，我不得不舍弃一些时间和精力。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; padding: 0px;&quot;&gt;以前说过，女程序员的职业规划，大多数在婚姻后都选择了家庭。我也不例外，家为主，事业为辅。打理博客和做网站成了业余的工作。现在逛母婴论坛，参与活动，比我自己的博客还勤快。昨天也因为攒积分兑换玩具和尿布的事情，发动了一些我能肯定他们能帮忙的朋友，来帮我注册攒积分。当天更新积分后我就兑换了1700个积分。有不少朋友还召集了身边其他人来帮忙，真是感动无比。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; padding: 0px;&quot;&gt;以前每个月拿固定工资任性挥霍的日子不在了，换来了生活的柴米油盐，迎接一个新的生命，又会过渡到另外一种生活状态，不再计较是否是名牌，兴许对自己越来越抠抠搜搜，越来越喜欢打折、免费的商品...&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; padding: 0px;&quot;&gt;其实生活本该如此！&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; padding: 0px;&quot;&gt;PS：如果你也愿意帮我攒积分，请拿出你的手机，加微信公众号“帮宝适”选择第一个官方认证的帮宝适，然后点击“成长乐园”中的“新会员注册”，关键的一步就是填写我的注册邀请码 8X40C750 接下来的步骤就随你自己了，地址信息可以不用真实的，但你周围如果有其他朋友需要，可以送他们哦~！&lt;/p&gt;&lt;/ul&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','upload/2016-06-03/57514d72c15e3.jpg','刘春阳',0,'这是第一篇2015年的生活日记，我的这个博客也因为孕期给耽搁了不少，要不然每个月都能出一两套模板，或者定时更新一些技术文章，群里面也很少参与讨论。现在因为这个即将到来的小家伙，我不得不舍弃一些时间和精力。',1,3,1464946034,0);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
