@@ -13,11 +13,11 @@
 	<div class="topNav">
 	<a  class="logo floatl" href=""><img src="__PUBLIC__/home/images/logo.jpg"></a>
 	<ul class="top_ul floatr">
-		<li><a class="color" href="{:U('home/index/index')}">首页</a><div class="show">Protal</div></li>
-		<li><a href="{:U('home/aboutme/index')}">关于我</a><div class="show">About</div></li>
-		<li><a href="{:U('home/manlife/index')}">慢生活</a><div class="show">Life</div></li>
-		<li><a href="{:U('home/gossip/index')}">碎言碎语</a><div class="show">Doing</div></li>
-		<li><a href="javascript:void(0)">学无止境</a><div class="show">Learn</div></li>
-		<li><a href="javascript:void(0)">留言板</a><div class="show">Guestbook</div></li>
+		<li><a <?php if(CONTROLLER_NAME=='Index'){echo 'class="color"';} ?>  href="{:U('home/index/index')}">首页</a><div class="show">Protal</div></li>
+		<li><a <?php if(CONTROLLER_NAME=='Aboutme'){echo 'class="color"';} ?> href="{:U('home/aboutme/index')}">关于我</a><div class="show">About</div></li>
+		<li><a <?php if(CONTROLLER_NAME=='Manlife'){echo 'class="color"';} ?> href="{:U('home/manlife/index')}">慢生活</a><div class="show">Life</div></li>
+		<li><a <?php if(CONTROLLER_NAME=='Gossip'){echo 'class="color"';} ?> href="{:U('home/gossip/index')}">碎言碎语</a><div class="show">Doing</div></li>
+		<li><a <?php if(CONTROLLER_NAME=='Study'){echo 'class="color"';} ?> href="{:U('home/study/index')}">学无止境</a><div class="show">Learn</div></li>
+		<li><a <?php if(CONTROLLER_NAME=='Liuyan'){echo 'class="color"';} ?> href="{:U('home/liuyan/index')">留言板</a><div class="show">Guestbook</div></li>
 	</ul>
 </div>
