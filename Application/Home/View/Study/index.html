@@ -1,61 +1,58 @@
 <include file="Public/header" />
-	<div class="banner">
-		<div class="banner_mid clearfix">
-			<div class="text floatl">
-				<p>我们不停的翻弄着回忆</p>
-				<p>却再也找不回那时的自己</p>
-				<p>红尘一梦，不再追寻</p>
-			</div>
-			<div class="banner_mid_right floatr">
-				<a href="">
-					<img src="__PUBLIC__/home/images/photos2.jpg">
-				</a>
-				<a class="hide_qing" href="">
-					<p>杨青</p>
-				</a>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-	$(function(){
-		$(".banner_mid_right").mouseover(function(){
-			$(".hide_qing").stop().animate({"top":"97px"},150)
-		})
-		$(".banner_mid_right").mouseout(function(){
-			$(".hide_qing").stop().animate({"top":"130px"},150)
-		})
-	})
-	</script>
-	<div class="main clearfix">
-		<h2>
-			<p>文章<span>推荐</span></p>
-		</h2>
-		<div class="content floatl clearfix">
-			<h3 class="first_h3"><a href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
+<div class="all_show">
+	<h2>栏目导航</h2>
+
+	<ul class="all_show_ul clearfix">
+	<foreach name="study" item="v">
+		<li>{$v.name}</li>
+		</foreach>
+	</ul>		
+</div>
+
+<div class="content_box">
+	<article class="main_content clearfix">
+		<header>
+			<h1 class="green_content">
+				<a href="" class="green_content_a1">网站首页</a><a href="" class="green_content_a2">学无止境</a>
+				<span class="saying">
+					n像“草根”一样，紧贴着地面，低调的存在，冬去春来，枯荣无恙。
 				</span>
-			</p>
-		</div>
+			</h1>
+		</header>
+		<article class="content_text clearfix">
+		<foreach name="boke" item="vo">
+			<section class="text_box">
+				<header>
+					<h2>
+						{$vo.title}
+					</h2>
+					<p>
+						<span>发布时间：{$vo.create_time|date="Y-m-d",###}作者：{$vo.author}</span>
+						[<a href="">{$manlife[$vo['categroy_id']]['name']}</a>]
+					</p>
+				</header>
+				<section class="content_main_text clearfix">
+					<a href="" class="left_img_box">
+						<img src="__PUBLIC__/{$vo.pic}" width="180px">
+					</a>
+					<p class="right_box">
+						{$vo.description}
+					</p>
+					<p class="right_button">
+						<span>
+							阅读全文
+						</span>
+					</p>
+				</section>
+			</section>
+			</foreach>
+		</article>
 		<div class="main_right floatr">
-			<div class="weather">
-				<img src="__PUBLIC__/home/images/weather.jpg">
+			<div>
+				<form>
+					<input type="" name="" placeholder="请输入关键字" class="input">
+					<span class="search">搜索</span>
+				</form>
 			</div>
 			<div class="news">
 				<h3>
@@ -65,14 +62,6 @@
 				</h3>
 				<ul>
 					<li><a  class="first_li_a"href="">帝国cms首页、自定义页面如何实现分页</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【郑重申明】本站只提供静态模板下载！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
 				</ul>
 			</div>
 			<div class="rank">
@@ -83,195 +72,51 @@
 				</h3>
 				<ul>
 					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+
 				</ul>
 			</div>
-			<div class="share">
+			<div class="your_interst-box">
 				<h3>
 					<p>
-						友情<span>链接</span>
+						<span>猜你喜欢</span>
 					</p>
 				</h3>
-				<div class="model">
-					<span>
-						<a href="">三维模型下载</a>
-					</span>
-				</div>
-				<div class="share_btn clearfix">
-					<ul class="clearfix">
-						<li>
-							<a href=""></a>
-						</li>
-						<li>
-							<a class="btn_qq" href=""></a>
-						</li>
-						<li>
-							<a class="btn_weibo" href=""></a>
-						</li>
-						<li>
-							<a class="btn_tqq" href=""></a>
-						</li>
-						<li>
-							<a class="btn_renren" href=""></a>
-						</li>
-						<li>
-							<a class="btn_weixin" href=""></a>
-						</li>
-					</ul>
-				</div>
-				<div class="code">
-					<p>
-					扫描二维码关注<span>杨青博客</span>官方微信账号
+				<div class="your_interst_content">
+					<img src="__PUBLIC__/home/images/inter1.jpg">
+					
+					<img src="__PUBLIC__/home/images/inter2.jpg">
+					
+					<p class="inter_p">
+						<span>热门手机推荐</span>
+						<span>墙绘大师</span>
 					</p>
-					<a href=""><img src="__PUBLIC__/home/images/weixin.jpg"></a>
+					<img src="__PUBLIC__/home/images/inter1.jpg">
+					<img src="__PUBLIC__/home/images/inter2.jpg">
+					<p class="inter_p">
+						<span>热门手机推荐</span>
+						<span>墙绘大师</span>
+					</p>
+					<p class="inter_p3">
+						<span>
+							
+						</span>
+						<span>
+							
+						</span>
+					</p>
 				</div>
 			</div>
-		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
+			<div class="people share">
+				<h3>
+					<p>
+						<span>最近访客</span>
+					</p>
+				</h3>
+				<p class="fangke_p2">
+				   <img src="__PUBLIC__/home/images/right_bottom.png">
 				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
 			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
 		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-					示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-	</div>
-	<div class="footer">
-		<p>
-			Design by DanceSmile <a href="">蜀ICP备11002373号-1</a> 
-		</p>
-	</div>
-	<script type="text/javascript">
-	$(function(){
-			 $(".top_ul>li>a").mouseover(function(){
-			 	var index = $(this).parent().index()
-			 	$(".show").eq(index).removeClass("bbb")
-			 	$(".show").eq(index).addClass("aaa")
-			})
-			  $(".top_ul>li>a").mouseout(function(){
-			 	var index = $(this).parent().index()
-			 	$(".show").eq(index).removeClass("aaa");
-			 	$(".show").eq(index).addClass("bbb")
-			})
-			$(".top_ul li a").click(function(){
-				$(this).addClass("color").parent().siblings().children().removeClass("color")
-			})
-		})
-</script>
+	</article>
+</div>
 </body>
-</html>

@@ -38,6 +38,10 @@ class BlogController extends Controller {
     }
     public function update(){
         $id = I('get.id',0);
+        $category = M('category');
+        $category_info=$category->select();
+        $list=getTree($category_info);
+        $this->assign('category',$list);
     	$blog_info = M('blog')->where("id = $id")->find();
     	$this->assign('blog',$blog_info);
     	$this->display();
