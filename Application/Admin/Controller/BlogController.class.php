@@ -22,13 +22,6 @@ class BlogController extends Controller {
         $category = M('category');
         $category_info=$category->select();
         $list=getTree($category_info);
-<<<<<<< .mine
-       // var_dump($list);die();
-||||||| .r21
-        var_dump($list);die();
-=======
-       
->>>>>>> .r23
         $this->assign('category',$list);
     	$this->display();
     }
