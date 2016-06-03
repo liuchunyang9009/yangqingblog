@@ -1,0 +1,40 @@
+<include file="Public/header" />
+<div class="content_box">
+	<article class="main_content clearfix">
+	
+		<aside class="right_bar">
+			<ul>
+				<li>网名：DanceSmile | 即步非烟</li>
+				<li>姓名：杨青</li>
+				<li>籍贯：四川省—成都市</li>
+				<li>现居：天津市—滨海新区</li>
+				<li>职业：网站设计、网站制作</li>
+				<li>副业：<a href="" style="color:#1CA368">进口休闲零食淘宝店</a></li>
+				<li>喜欢的书：《红与黑》《红楼梦》</li>
+				<li>喜欢的音乐：《burning》《just one last dance》《相思引》</li>
+				<li><img src="__PUBLIC__/home/images/qq.png"></li>
+				<li><img src="__PUBLIC__/home/images/mail.png"></li>
+			</ul>
+		</aside>
+	</article>
+	
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+		})
+</script>

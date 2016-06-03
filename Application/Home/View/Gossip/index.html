@@ -1,0 +1,71 @@
+<include file="Public/header" />
+	<div class="content_box">
+		<article class="main_content clearfix">
+			<header>
+				<h1 class="green_content">
+					<a href="" class="green_content_a1">网站首页</a><a href="" class="green_content_a2">碎言碎语</a>
+					<span class="saying">
+						删删写写，回回忆忆，虽无法行云流水，却也可碎言碎语。
+					</span>
+				</h1>
+			</header>
+		</article>
+		<div class="mainBody">
+			<div class="mainBody_left">
+				<p class="clearfix">
+					<img src="__PUBLIC__/home/images/left_img.jpg">
+					<span>生活的坑都是自己挖的！譬如，听别人讲话，听到最后，耳朵里只会记住两类话：最愿意听的和最不愿意听的。然后，喜欢听的未必化成快乐，但不喜欢听的一定化成了痛苦，其他的都化成了风。</span>
+				</p>
+				<div class="dot"></div>
+				<div class="dateview">2015-02-01</div>
+				<div class="triangle"></div>
+			</div>
+		</div>
+		<div class="mainBody">
+			<div class="mainBody_left">
+				<p class="clearfix">
+					<img src="__PUBLIC__/home/images/left_img.jpg">
+					<span>生活的坑都是自己挖的！譬如，听别人讲话，听到最后，耳朵里只会记住两类话：最愿意听的和最不愿意听的。然后，喜欢听的未必化成快乐，但不喜欢听的一定化成了痛苦，其他的都化成了风。</span>
+				</p>
+				<div class="dot"></div>
+				<div class="dateview">2015-02-01</div>
+				<div class="triangle"></div>
+			</div>
+		</div>
+		<div class="mainBody">
+			<div class="mainBody_left">
+				<p class="clearfix">
+					<img src="__PUBLIC__/home/images/left_img.jpg">
+					<span>生活的坑都是自己挖的！譬如，听别人讲话，听到最后，耳朵里只会记住两类话：最愿意听的和最不愿意听的。然后，喜欢听的未必化成快乐，但不喜欢听的一定化成了痛苦，其他的都化成了风。</span>
+				</p>
+				<div class="dot"></div>
+				<div class="dateview">2015-02-01</div>
+				<div class="triangle"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+			$(".mainBody_left").mouseover(function(){
+				$(this).css({"background-color":"#dfdfdf","color":"#444"}).children(".triangle").show().siblings(".dot").css({"background":"#5ea51b"});
+			})	
+			$(".mainBody_left").mouseout(function(){
+			$(this).css({"background-color":"#f8f8f8","color":"#756f71"}).children(".triangle").hide().siblings(".dot").css({"background":"#ccccce"});
+			})
+		})
+</script>
+</body>
+</html>
