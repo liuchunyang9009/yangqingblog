@@ -1,0 +1,38 @@
+<include file="Public/header" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>UMEDITOR 完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="__PUBLIC__/vendor/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/vendor/umeditor/third-party/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/vendor/umeditor/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/vendor/umeditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/vendor/umeditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<div class="col-lg-12 col-sm-12 row">
+    <form action="{:U('admin/file/handleAdd')}" method="post" enctype="multipart/form-data">
+    	网名: <input type="text" name="webname" value="{$file['webname']}"><br>
+        姓名: <input type="text" name="name" value="{$file['name']}"><br>
+        籍贯: <input type="text" name="address" value="{$file['address']}"><br> 
+        现居: <input type="text" name="now_address" value="{$file['now_address']}"><br>
+        职业: <input type="text" name="job" value="{$file['job']}"><br>
+        副业: <input type="text" name="sec_job" value="{$file['sec_job']}"><br>
+        喜欢的书: <input type="text" name="love_book" value="{$file['love_book']}"><br>
+        喜欢的音乐: <input type="text" name="love_music" value="{$file['love_book']}"><br>
+        域名：<input type="text" name="area" value="{$file['area']}"><br>
+        注册域名：<input type="text" name="area_link" value="{$file['area_link']}"><br>
+        邀你点评：<input type="text" name="ask_you" value="{$file['ask_you']}"><br>
+        服务器：<input type="text" name="server" value="{$file['server']}"><br>
+        购买空间：<input type="text" name="spare_link" value="{$file['spare_link']}"><br>
+        参考我的空间配置：<input type="text" name="look_link" value="{$file['look_link']}"><br>
+        程序：<input type="text" name="process" value="{$file['process']}"><br>
+        内容: <script type="text/plain" name="content" id="myEditor" value="{$file['content']}" 
+             style="width:1000px;height:240px;">
+             </script>
+              <input type="submit">
+    </form>
+    <script type="text/javascript">
+        var um = UM.getEditor('myEditor');
+    </script>
+</div>
+<include file="Public/footer" />
