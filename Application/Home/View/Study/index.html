@@ -1,14 +1,5 @@
 <include file="Public/header" />
-<div class="all_show">
-	<h2>栏目导航</h2>
-
-	<ul class="all_show_ul clearfix">
-	<foreach name="study" item="v">
-		<li>{$v.name}</li>
-		</foreach>
-	</ul>		
-</div>
-
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/xuewuzhijing.css">
 <div class="content_box">
 	<article class="main_content clearfix">
 		<header>
@@ -20,15 +11,15 @@
 			</h1>
 		</header>
 		<article class="content_text clearfix">
-		<foreach name="boke" item="vo">
+		<foreach name="blog" item='vo'>
 			<section class="text_box">
 				<header>
 					<h2>
-						{$vo.title}
+						{$blog.title}
 					</h2>
 					<p>
 						<span>发布时间：{$vo.create_time|date="Y-m-d",###}作者：{$vo.author}</span>
-						[<a href="">{$manlife[$vo['categroy_id']]['name']}</a>]
+						[<a href="">{$study[$vo['categroy_id']]['name']}</a>]
 					</p>
 				</header>
 				<section class="content_main_text clearfix">
@@ -40,12 +31,14 @@
 					</p>
 					<p class="right_button">
 						<span>
+						<a href="{:U('home/Study/detail',array('id'=>$vo['id']))}">
 							阅读全文
+						</a>
 						</span>
 					</p>
 				</section>
 			</section>
-			</foreach>
+			</foreach>	
 		</article>
 		<div class="main_right floatr">
 			<div>
@@ -53,6 +46,17 @@
 					<input type="" name="" placeholder="请输入关键字" class="input">
 					<span class="search">搜索</span>
 				</form>
+			</div>
+			<div class="all_show">
+				<h2>栏目导航</h2>
+				<ul class="all_show_ul clearfix">
+					<li>心得笔记</li>
+					<li>IP查询</li>
+					<li>CSS3|Html5</li>
+					<li>网站建设</li>
+					<li>JS经典实例</li>
+					<li>推荐工具</li>
+				</ul>		
 			</div>
 			<div class="news">
 				<h3>
@@ -62,6 +66,14 @@
 				</h3>
 				<ul>
 					<li><a  class="first_li_a"href="">帝国cms首页、自定义页面如何实现分页</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【郑重申明】本站只提供静态模板下载！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
 				</ul>
 			</div>
 			<div class="rank">
@@ -72,7 +84,14 @@
 				</h3>
 				<ul>
 					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-
+					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
+					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
+					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
+					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
+					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
+					<li><a href="">个人博客模板《世界杯来袭》</a></li>
 				</ul>
 			</div>
 			<div class="your_interst-box">
@@ -120,3 +139,30 @@
 	</article>
 </div>
 </body>
+<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+			$(".mainBody_left").mouseover(function(){
+				$(this).css({"background-color":"#dfdfdf","color":"#444"}).children(".triangle").show().siblings(".dot").css({"background":"#5ea51b"});
+			})	
+			$(".mainBody_left").mouseout(function(){
+			$(this).css({"background-color":"#f8f8f8","color":"#756f71"}).children(".triangle").hide().siblings(".dot").css({"background":"#ccccce"});
+			})
+			$(".page a:gt(0)").click(function(){
+				$(this).addClass("page_color").siblings().removeClass("page_color")
+			})
+		})
+</script>
+</html>

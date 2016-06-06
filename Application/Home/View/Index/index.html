@@ -1,4 +1,5 @@
 <include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/shouye.css">
 	<div class="banner">
 		<div class="banner_mid clearfix">
 			<div class="text floatl">
@@ -30,30 +31,34 @@
 		<h2>
 			<p>文章<span>推荐</span></p>
 		</h2>
+		<div class="main_left">	
+		<foreach name='blog' item='vo'>
 		<div class="content floatl clearfix">
-			<h3 class="first_h3"><a href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
+			<h3 class="first_h3"><a href="">{$vo.title}</a></h3>
 			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
+				<img src="__PUBLIC__/{$vo.pic}" style="width:100%">
 			</div>
 			<div class="content_right floatl">
 				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
+					{$vo.description}
 				</p>
-				<a  class="read_all"href="">
+				<a  class="read_all" href="{:U('home/'.$detail_url[$vo['parent_categroy_id']]['controller'].'/detail',array('id'=>$vo['id']))}">
 					阅读全文>>
 				</a>
 			</div>
 			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
+				<span>{$vo.create_time|date="Y-m-d",###}</span>
+				<span>作者：{$vo.author}</span>
 				<span>
 					个人博客:[
-					<a href="">原创个人博客模版</a>
+					<a href="">{$categroy[$vo['categroy_id']]['name']}</a>
 					]
 				</span>
 			</p>
 		</div>
-		<div class="main_right floatr">
+		</foreach>
+	</div>
+	<div class="main_right floatr">
 			<div class="weather">
 				<img src="__PUBLIC__/home/images/weather.jpg">
 			</div>
@@ -64,15 +69,9 @@
 					</p>
 				</h3>
 				<ul>
-					<li><a  class="first_li_a"href="">帝国cms首页、自定义页面如何实现分页</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【郑重申明】本站只提供静态模板下载！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+				<foreach name='blog'  item='vo' key='k'>
+					<li><a <?php if($k==0){ echo 'class="first_li_a"';} ?> href="">帝国cms首页、自定义页面如何实现分页</a></li>
+			    </foreach>
 				</ul>
 			</div>
 			<div class="rank">
@@ -82,15 +81,9 @@
 					</p>
 				</h3>
 				<ul>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+					<foreach name='blog'  item='vo' key='k'>
+					<li><a href="">{$vo.title}</a></li>
+					</foreach>
 				</ul>
 			</div>
 			<div class="share">
@@ -134,123 +127,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
 		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-					示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-		<div class="content floatl clearfix">
-			<h3><a class="title" href="">【活动作品】柠檬绿兔小白个人博客模板</a></h3>
-			<div class="content_left floatl">
-				<img src="__PUBLIC__/home/images/content_left.png">
-			</div>
-			<div class="content_right floatl">
-				<p>
-					展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇
-				</p>
-				<a  class="read_all"href="">
-					阅读全文>>
-				</a>
-			</div>
-			<p class="content_footer">
-				<span>2015-04-10</span>
-				<span>作者：杨青</span>
-				<span>
-					个人博客:[
-					<a href="">原创个人博客模版</a>
-					]
-				</span>
-			</p>
-		</div>
-	</div>
 	<div class="footer">
 		<p>
 			Design by DanceSmile <a href="">蜀ICP备11002373号-1</a> 

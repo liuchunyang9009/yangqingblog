@@ -2,10 +2,6 @@
 namespace Home\Controller;
 use Think\Controller;
 class ManlifeController extends Controller {
-	/*public $detail_url = array(
-		1 => array('controller'=>'Manlife','method'=>'detail'),
-		7 => array('controller'=>'Study','method'=>'detail'),
-		);*/
     public function index(){
     	$Images = M('category');
     	$blog=M('blog');
@@ -20,7 +16,6 @@ class ManlifeController extends Controller {
     	$blog_list = $blog->where($where)->order("create_time desc")->select();
     	$this->assign('manlife',$lists);
     	$this->assign('boke',$blog_list);
-    	//$this->assign('detail_url',$this->detail_url);
        	$this->display(); 
     }
     function detail(){
