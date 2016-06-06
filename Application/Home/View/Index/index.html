@@ -70,7 +70,7 @@
 				</h3>
 				<ul>
 				<foreach name='blog'  item='vo' key='k'>
-					<li><a <?php if($k==0){ echo 'class="first_li_a"';} ?> href="">帝国cms首页、自定义页面如何实现分页</a></li>
+					<li><a  href="">{$vo.title}</a></li>
 			    </foreach>
 				</ul>
 			</div>
@@ -81,7 +81,7 @@
 					</p>
 				</h3>
 				<ul>
-					<foreach name='blog'  item='vo' key='k'>
+					<foreach name='blog_is'  item='vo' key='k'>
 					<li><a href="">{$vo.title}</a></li>
 					</foreach>
 				</ul>

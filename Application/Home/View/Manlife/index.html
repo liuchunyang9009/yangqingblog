@@ -11,7 +11,7 @@
 			</h1>
 		</header>
 		<article class="content_text clearfix">
-		<foreach name="boke" item="vo">
+		<foreach name="log" item="vo">
 			<section class="text_box">
 				<header>
 					<h2>
@@ -42,7 +42,7 @@
 			<div class="all_show">
 			<foreach name="manlife" item="v">
 				<span>
-					<a href="">{$v.name}</a>
+					<a href="{:U('home/Manlife/index',array('categroy_id'=>$v['id']))}">{$v.name}</a>
 				</span>
 			</foreach>
 			</div>
@@ -54,15 +54,9 @@
 					</p>
 				</h3>
 				<ul>
-					<li><a  class="first_li_a"href="">帝国cms首页、自定义页面如何实现分页</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【郑重申明】本站只提供静态模板下载！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<foreach name="bl" item="v">
+					<li><a  class="first_li_a"href="">{$v.title}</a></li>
+					</foreach>	
 				</ul>
 			</div>
 			<div class="rank">
@@ -72,15 +66,9 @@
 					</p>
 				</h3>
 				<ul>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+					<foreach name="boke" item="vo">
+						<li><a href="">{$vo.title}</a></li>
+					</foreach>
 				</ul>
 			</div>
 			<div class="your_interst-box">

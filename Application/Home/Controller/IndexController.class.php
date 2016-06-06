@@ -17,8 +17,9 @@ class IndexController extends Controller {
     	$where['id']=I('get.id');	
     	}
     	$blog_list = $blog->where($where)->order('create_time desc')->select();
-    	
+    	$blog_is = $blog->where($where)->order('read_num desc')->select();
     	$this->assign('blog',$blog_list);
+        $this->assign('blog_is',$blog_is);
     	$this->assign('categroy',$categroy_lists);
     	$this->assign('detail_url',$this->detail_url);
         $this->display(); 
@@ -27,7 +28,7 @@ class IndexController extends Controller {
     	$where['id']=I('get.id');
     	$blog = M('blog');
     	$blog_list =$blog->where($where)->find();
-    	$this->assign('blog',$blog_list) ;
+    	$this->assign('blog_list',$blog_list) ;
         $this->display();
     }
     
