@@ -23,9 +23,6 @@ a{
 li {
 	list-style:none;
 }
-.color{
-	color:#e15782 !important;
-}
 .topNav {
 	margin:0 auto;
 	width:1000px;
@@ -64,6 +61,9 @@ li {
 	line-height: 60px;
 	font-size: 12px;
 	z-index: -1;
+}
+.color{
+	color:#e15782 !important;
 }
 .aaa{
 	animation: ani 0.5s forwards;
@@ -123,56 +123,38 @@ li {
 }
 .all_show{
 	position: fixed;
-	z-index: 100;
-	margin-left: 10px;
-	width: 240px;
-	height: 90px;
+	width: 250px;
+	height: 200px;
+	background: #fff;
 }
-.all_show>span{
-	display: inline-block;
-	width: 110px;
-	height: 40px;
+.all_show>h2{
+	padding-left: 50px;
 	line-height: 40px;
-	text-align: center;	
-	font-size: 12px;
-	z-index: 100;
-	margin: 3px 0;
+	background: url(../images/6167.png) no-repeat 8px 8px;
+	z-index: 100000000;
 }
-.all_show>span>a{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	color: #FFF;
+.all_show_ul{
+	position: absolute;
+	width: 240px;
+	margin-left: 3px;
+	list-style: none;
+	text-align: center;
+	color: #333;
 }
-.rotate{
-	animation: ra 0.5s linear forwards;
-	background-color: rgba(255, 255, 255, 0.2)
+.all_show_ul>li{
+	float: left;
+	width: 112px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #ccc;
+	margin: 3px;
+	background: #fff;
+	transition-property: transform;
+	transition-duration: 1s;
 }
-@keyframes ra{
-	0%{transform: rotate(0deg);}
-	100%{transform: rotate(360deg);}
+.all_show_ul>li:hover{
+	transform: rotate(360deg);
 }
-.f_rotate{
-	animation: dd 0.5s linear forwards;
-
-}
-@keyframes dd{
-	0%{transform: rotate(360deg);}
-	100%{transform: rotate(0deg);}
-}
-.all_show>span:nth-child(1){
-	background: #FE5187;
-}
-.all_show>span:nth-child(2){
-	background: #339967;
-}
-.all_show>span:nth-child(3){
-	background: #FF8151;
-}
-.all_show>span:nth-child(4){
-	background: #66CC9A;
-}
-
 .text_box{
 	float: left;
 	width: 97%;
@@ -229,8 +211,26 @@ li {
 	margin: 10px 0;
 	width:250px;
 }
+.input{
+	vertical-align: top;
+	width: 180px;
+	height: 25px;
+	color: #ccc;
+}
+.search{
+	display: inline-block;
+	width: 46px;
+	height: 30px;
+	margin-left: 7px;
+	background: #9bbb59;
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	padding-left: 4px;
+}
 .news{
-	margin-top: 120px;
+	margin-top: 110px;
 }
 .news h3 {
 	background:url(../images/r_title_bg.jpg) repeat-x 20px center;
@@ -351,7 +351,6 @@ li {
 	margin-left: 10px;
 }
 .your_interst_content{
-	position: relative;
 	width: 100%;
 	background: #fff;
 	text-align: center;

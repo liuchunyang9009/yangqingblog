@@ -11,6 +11,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tf
 }
 body {
 	font:12px "宋体", Arial, Helvetica, sans-serif;
+	color:#756F71;
 }
 .color{
 	color:#e15782 !important;
@@ -170,4 +171,42 @@ li {
 	height:0;
 	border-top:20px solid #ddd;
 	border-right: 20px solid  transparent;
+}
+.page {
+	margin:30px 0 20px;
+	width:100%;
+	text-align: center;
+	overflow: hidden;
+}
+.page a {
+	display: inline-block;
+	margin:0;
+	width:26px;
+	height:26px;
+	line-height:26px;
+	border-radius: 50%;
+	border:1px solid #999;
+	color:#f33;
+}
+.page a:hover {
+	background-color: #333;
+	color:#fff;
+}
+.page a b {
+	color:#999;
+}
+.page .page_color{
+	color:#fff !important;
+	background-color: #333;
+}
+.footer {
+	margin:0 auto;
+	width:1000px;
+	height:40px;
+	text-align: center;
+	line-height: 40px;
+	border-top: 1px solid #e8e8e8;
+}
+.footer a {
+	color:#333;
 }

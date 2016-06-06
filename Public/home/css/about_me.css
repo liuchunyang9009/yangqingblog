@@ -80,11 +80,11 @@ li {
 	margin: 0 auto;
 }
 .main_content{
-	width: 100%;
-	margin-top: 20px;
+	float: left;
+	width: 740px;
 }
-.green_content{
-
+.main_right {
+	padding-top: 20px;
 }
 .green_content>a{
 	display: inline-block;
@@ -116,6 +116,53 @@ li {
 	margin-top: 20px;
 	color: #696969;
 	background: url(../images/r_line.jpg) repeat-y right;
+}
+.text_box{
+	float: left;
+	width: 97%;
+	margin-top: 30px;
+	color: #333;
+	padding-bottom:20px;
+	border-bottom: 1px dashed #ccc;
+}
+.text_box>header>h2{
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 10px;
+}
+.text_box>header>p>a{
+	color: #63B120;
+}
+.content_main_text{
+	margin-top: 10px;
+	width: 100%;
+}
+.left_img_box{
+	float: left;
+	display: block;
+	width: 182px;
+}
+.left_img_box>img{
+	border: 1px solid #ccc;
+}
+.right_box{
+	float: left;
+	width: 510px;
+	margin: 0 10px;
+}
+.right_button{
+	float: right;
+	width: 80px;
+	height: 35px;
+	margin-top: 30px;
+}
+.right_button>span{
+	display: inline-block;
+	width: 80px;
+	line-height: 35px;
+	text-align: center;
+	background: #f90;
+	color: #fff;
 }
 .text>p{
 	margin: 30px 0;

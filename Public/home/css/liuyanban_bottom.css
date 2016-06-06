@@ -1,0 +1,115 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+}
+body{
+	font: 12px "宋体", Arial, Helvetica, sans-serif;
+    color: #756F71;
+}
+.clearfix:after {
+	height: 0;
+	content: "";
+	display: block;
+	clear: both;
+}
+p{
+	font-size: 13px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+li {
+	list-style:none;
+}
+/*y以上为公有类*/
+.bottom_box{
+	width: 700px;
+}
+.shejiao{
+	float: left;
+	line-height: 24px;
+	color: #333;
+}
+.lcon_box{
+	float: left;
+	width: 308px;
+	height: 48px;
+}
+.lcon_box>ul>li{
+	float: left;
+	width: 54px;
+	height: 16px;
+	padding: 4px;	
+	margin: 0 0 0 6px;
+	text-align: center;
+	background: url(../images/icons.png) no-repeat;
+	background-position: 0 4px;
+	background-size: 26%;
+}
+.lcon_box>ul>li>a{
+	display: inline-block;
+	color: #888888;
+	padding-left: 7px;
+}
+.lcon_box>ul>.lcon_1{background-position: 0 -4}
+.lcon_box>ul>.lcon_2{background-position: 0 -25px}
+.lcon_box>ul>.lcon_3{background-position: 0 -50px}
+.lcon_box>ul>.lcon_4{background-position: 0 -76px}
+.lcon_box>ul>.lcon_5{background-position: 0 -102px}
+.lcon_box>ul>.lcon_6{background-position: 0 -127px}
+.lcon_box>ul>.lcon_7{background-position: 0 -156px}
+.lcon_box>ul>.lcon_8{background-position: 0 -179px}
+.ul_hidden{
+	display: none;
+}
+.more{
+	display: inline-block;
+	padding-top: 5px;
+}
+.say_box{
+	width: 700px;
+}
+.say_box>div>a{
+	float: left;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: top;
+	border-radius: 3px;
+	background: url(../images/web.jpg);
+}
+.say_box>div>textarea{
+	float: left;
+	margin-left: 10px;
+	width: 630px;
+	height: 74px;
+	border-radius: 3px;
+	border-color: #ccc;
+	border-bottom: none;
+	color: #ccc;
+}
+.fabu{
+	width: 634px;
+	border: 1px solid #ccc;
+	margin-left: 60px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.6);
+	border-bottom-left-radius: 3px;
+	box-shadow: inset 0 0 30px #ccc;
+}
+.fabu>input{
+	float: right;
+	width: 100px;
+	height: 32px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #333;
+}
+.footer{
+	text-align: right;
+	margin-top: 17px;
+}
+.footer>a{
+	color: #999;
+}

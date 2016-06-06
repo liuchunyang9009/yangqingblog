@@ -142,6 +142,10 @@ li {
 .main h2 p span {
 	color:#FE5187;
 }
+.main_left {
+	float:left;
+	width:740px;
+}
 .content {
 	width:740px;
 	background: url(../images/h_line.jpg) right repeat-y;
