@@ -1,0 +1,507 @@
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/detail.css">
+<div class="content_box clearfix">
+	<article class="main_content clearfix">
+		<header>
+			<h1 class="green_content">
+				<a href="" class="green_content_a1">网站首页</a><a href="" class="green_content_a2">网站建设</a>
+				<span class="address">
+					<span>您当前的位置:</span>
+					<a href="">首页</a>>
+					<a href="">学无止境</a>>
+					<a href="">网站建设</a>
+				</span>
+			</h1>
+		</header>
+		<article class="content_text clearfix">
+			<section class="text_box">
+				<header>
+					<h1>
+						帝国cms首页、自定义页面如何实现分页
+					</h1>
+					<p>
+						发布时间：2015-07-03编辑：<a href="" class="yangqing">杨青</a>阅读（13819）
+					</p>
+			    </header>
+			    <!-- 小婊砸 你们在这里建div输入内容 -->
+			    <div>
+			    	第一个版本：作为一个做网站的设计师，工作了几年，却没有一个属于自己的博客，所以，时隔3年后，2012年12月底拥有了自己的第一个博客，也是目前仅有的一个。第一个版本，用一个漏洞百出的asp程序仿的一个界面，经常被挂马。那会儿只觉得asp比php简单，能很好控制程序，所以一直坚持用到第二个版本。
+第二个版本：同样用的asp，换了个界面而已。首页展示的内容也比较多了。颜色绚丽些，网站放了很多娱乐性的东西，比如音乐、视频、互动调查等...持续用了不到1年的时间，我开始设计下一个版本的界面。而这时，我也正在学习html5、css3,所以第三个版本成了我练html5 css3的第一个作品...
+第三个版本：为什么又换界面，而且还更换了程序？因为前一个版本被百度惩罚了，我就利用这段被惩罚的时间，设计了这个版本，全用的html5语义元素。果不然，不到一个星期，不仅排名上去了，权重也恢复了。
+PS总结：原来一年一个版本！而每次改版的契机都是被百度惩罚！界面不要频繁更换！好好检查代码，有没有冗余、结构有没有不合理的地方。
+关于服务器
+服务器的选择，因为当初做博客只是抱着一种只要有自己博客就行了的初衷，所以，一直用公司的服务器，而这个服务器上有asp、php的程序，不下200个，如果其中一个网站受到了攻击，无疑也牵连了我自己的网站。而服务器托管的电信还要每天在7点20的时候重启。经常有这个时段的网友访问不到我的网站。这还不算差，我占用这免费资源将近两年的时间，博客访问量也就是60个左右。
+再后来，因为这两年博客并未有所长进，网站访问速度又慢，又不稳定，又开始着急了，关注怎么优化网站。本来我已经辞职了，一直用之前公司的资源，也不好，在老公的支持和推荐下，选择了阿里云，又重新备案...后来证明，我的决定是正确的，阿里云从2013年底用了一年的时间，网站无论是速度还是访问上是大幅度的提高。
+PS总结：不能贪图便宜，所谓一分价钱一分货！
+			    </div>
+			</section>
+			<div class="keywords">
+				<p>
+					<span>关键字词：</span>
+					帝国cms,首页,自定义页面,分页
+				</p>
+			</div>
+			<div class="nextinfo floatl">
+				<p>
+					上一篇： <a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a>
+				</p>
+				<p>
+					下一篇： <a href="">123124235325235</a>
+				</p>
+			</div>
+			<div class="otherlink floatl">
+				<div class="otherlink_header">
+					<span>相关文章</span>
+				</div>
+				<ul class="clearfix"> 
+					<li><a href="">帝国cms常用标签调用方法总结（不得不收藏哦）</a></li>
+					<li><a href="">帝国cms怎样修改列表分页函数</a></li>
+				</ul>
+			</div>
+			<div class="top_comments">
+				<div class="comments_header">
+					被顶起来的评论
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="./images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding"><a href="">&nbsp顶(29)</a></span>
+							<span class="share">
+								<a href="">&nbsp 转发</a>
+								<span class="report"><a href="">&nbsp 举报</a></span>
+							</span>			
+						</p>
+					</div>
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="./images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding"><a href="">&nbsp顶(29)</a></span>
+							<span class="share">
+								<a href="">&nbsp 转发</a>
+								<span class="report"><a href="">&nbsp 举报</a></span>
+							</span>		
+						</p>
+					</div>
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="./images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding">&nbsp顶(29)</span>
+							<span class="share">&nbsp 转发
+								<span class="report">&nbsp 举报</span>
+							</span>		
+						</p>
+					</div>
+				</div>
+			</div>
+		<div class="comments_bottom clearfix">
+			<div class="comments_bottom_top">
+				<ul class="left_ul floatl">
+					<li class="li_bg li_pinglun">
+						<span>123</span>条评论
+					</li>
+					<li class="li_weibo"><span>10</span>条新浪微博</li>
+					<li class="li_tengxun"><span>8</span>条腾讯微博</li>
+				</ul>
+				<ul class="right_ul floatr">
+					<li><a href="javascript:void(0)">最早</a></li>
+					<li><a href="javascript:void(0)">最新</a></li>
+					<li><a href="javascript:void(0)">最热</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="pinglun">
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">博主你好！你的网站已提交到草录。链接地址http://ml.lmlblog.com/website/253.html</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">博主你好！你的网站已提交到草根站p://ml.lmlblog.com/website/253.html</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址ht/website/253.html</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">博主你好！你的网站已提交到草根站长目录。链接253.html</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="weibo">
+				<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="tengxun">
+				<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="page clearfix">
+			<ul class="floatr clearfix">
+				<li class="clearfix"><a class="page_bg" href="javascript:void(0)">1</a></li>
+				<li><a href="javascript:void(0)">2</a></li>
+				<li><a href="javascript:void(0)">3</a></li>
+				<li><a href="javascript:void(0)">4</a></li>
+				<li><a href="javascript:void(0)">5</a></li>
+				<li><a href="javascript:void(0)">...</a></li>
+				<li><a href="javascript:void(0)">123</a></li>
+			</ul>
+		</div>
+		<div>
+			<div class="bottom_box clearfix">
+		<div class="shejiao">
+		社交帐号登录:
+		</div>
+		<div class="lcon_box ">
+			<ul class="clearfix">
+				<li class="lcon_1">
+					<a href="">微信</a>
+				</li>
+				<li class="lcon_2">
+					<a href="">微博</a>
+				</li>
+				<li class="lcon_3">
+					<a href="">QQ</a>
+				</li>
+				<li class="lcon_4">
+					<a href="">人人</a>
+				</li>
+				<a class="more">
+					更多»
+				</a>
+			</ul>
+			<ul id="ul1" class="ul_hidden">
+				<li class="lcon_5">
+					<a herf>豆瓣</a>
+				</li>
+				<li class="lcon_6">
+					<a herf>开心</a>
+				</li>
+				<li class="lcon_7">
+					<a herf>百度</a>
+				</li>
+				<li class="lcon_8">
+					<a herf>谷歌</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+		<form class="say_box clearfix">
+			<div class="clearfix">
+				<a href=""></a>
+				
+				<textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea>
+			</div>
+			<div class="fabu clearfix">
+				<input type="button" name="" value="发布">
+			</div>
+			<p class="footer">
+				<a href="">
+					杨青个人博客网站正在使用多说
+				</a>
+			</p>
+		</form>
+
+		
+
+		</article>
+		<div class="main_right floatr">
+			<div class="all_show">
+				<h2>栏目导航</h2>
+				<ul class="all_show_ul clearfix">
+					<li>心得笔记</li>
+					<li>IP查询</li>
+					<li>CSS3|Html5</li>
+					<li>网站建设</li>
+					<li>JS经典实例</li>
+					<li>推荐工具</li>
+				</ul>		
+			</div>
+			<div class="news">
+				<h3>
+					<p>
+						栏目<span>最新</span>
+					</p>
+				</h3>
+				<ul>
+					<li><a  class="first_li_a"href="">帝国cms首页、自定义页面如何实现分页</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【郑重申明】本站只提供静态模板下载！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+				</ul>
+			</div>
+			<div class="rank">
+				<h3>
+					<p>
+						点击<span>排行</span>
+					</p>
+				</h3>
+				<ul>
+					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
+					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
+					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
+					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
+					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
+					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
+					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+				</ul>
+			</div>
+			<div class="people share">
+				<h3>
+					<p>
+						<span>最近访客</span>
+					</p>
+				</h3>
+				<p class="fangke_p2">
+				   <img src="./images/right_bottom.png">
+				</p>
+			</div>
+		</div>
+	</div>
+		</article>
+		</div>
+	
+</body>
+<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+
+			  $(".all_show>span>a").mouseover(function(){
+			  		$(this).removeClass("f_rotate")
+			 		$(this).addClass("rotate")
+			 	})
+			  $(".all_show>span>a").mouseout(function(){
+			 		$(this).removeClass("rotate")
+			 		$(this).addClass("f_rotate")
+			 	})
+			  $(".left_ul li").click(function(){
+				$(this).addClass("li_bg").siblings().removeClass("li_bg")
+			})
+			$(".right_ul li").click(function(){
+				$(this).children().addClass("color").parents().siblings().children().removeClass("color")
+			})
+			$(".page ul li a").click(function(){
+				$(this).addClass("page_bg").parents().siblings().children().removeClass("page_bg")
+			})
+			$(".li_weibo").click(function(){
+				$(".weibo").show().siblings(".pinglun").hide().siblings(".tengxun").hide();
+			})
+			$(".li_pinglun").click(function(){
+				$(".pinglun").show().siblings(".weibo").hide().siblings(".tengxun").hide();
+			})
+			$(".li_tengxun").click(function(){
+				$(".tengxun").show().siblings(".pinglun").hide().siblings(".weibo").hide();
+			})
+			$(".more").click(function(){
+			$("#ul1").toggleClass("ul_hidden")
+			})
+		})
+</script>
