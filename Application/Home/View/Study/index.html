@@ -11,7 +11,7 @@
 			</h1>
 		</header>
 		<article class="content_text clearfix">
-		<foreach name="blog" item='vo'>
+		<foreach name="log" item='vo'>
 			<section class="text_box">
 				<header>
 					<h2>
@@ -50,12 +50,9 @@
 			<div class="all_show">
 				<h2>栏目导航</h2>
 				<ul class="all_show_ul clearfix">
-					<li>心得笔记</li>
-					<li>IP查询</li>
-					<li>CSS3|Html5</li>
-					<li>网站建设</li>
-					<li>JS经典实例</li>
-					<li>推荐工具</li>
+				<foreach name="study" item="v">
+				<li><a href="{:U('home/Study/index',array('categroy_id'=>$v['id']))}">{$v.name}</a>></li>
+				</foreach>
 				</ul>		
 			</div>
 			<div class="news">
@@ -65,15 +62,9 @@
 					</p>
 				</h3>
 				<ul>
-					<li><a  class="first_li_a"href="">帝国cms首页、自定义页面如何实现分页</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【郑重申明】本站只提供静态模板下载！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+				<foreach name="bl" item="v" key="k">
+					<li><a <?php if($k==0){echo 'class="first_li_a"';}?> href="">{$v.title}</a></li>
+					</foreach>		
 				</ul>
 			</div>
 			<div class="rank">
@@ -82,16 +73,10 @@
 						模版<span>排行</span>
 					</p>
 				</h3>
-				<ul>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+				<ul>					
+				<foreach name="blog" item="vo">
+						<li><a href="">{$vo.title}</a></li>
+				</foreach>
 				</ul>
 			</div>
 			<div class="your_interst-box">

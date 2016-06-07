@@ -54,8 +54,8 @@
 					</p>
 				</h3>
 				<ul>
-					<foreach name="bl" item="v">
-					<li><a  class="first_li_a"href="">{$v.title}</a></li>
+					<foreach name="bl" item="v" key="k">
+					<li><a <?php if($k==0){echo 'class="first_li_a"';}?> href="">{$v.title}</a></li>
 					</foreach>	
 				</ul>
 			</div>
