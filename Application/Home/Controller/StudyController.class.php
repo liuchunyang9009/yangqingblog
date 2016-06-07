@@ -22,5 +22,24 @@ class StudyController extends Controller {
     	$this->assign('blog',$blog_log);
        	$this->display(); 
     }
+    public function detail(){
+        $blog = M('blog');
+       
+        $id=I('get.id');
+        if($id){
+        $where['id']=$id;
+        }
+        $blog_list =$blog->where($where)->find();
+        $map['parent_categroy_id']=7;
+        $map['categroy_id']=$blog_list['categroy_id'];
+        $map['id']  = array('lt',$id);
+        $blog_s = $blog->where($map)->order('id desc')->find();
+        $map['id']  = array('gt',$id);
+        $blog_x = $blog->where($map)->order('id asc')->find();
+        $this->assign('blog_list',$blog_list);
+        $this->assign('blog_s',$blog_s);
+        $this->assign('blog_x',$blog_x);
+        $this->display();
+    }
     
 }

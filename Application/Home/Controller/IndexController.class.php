@@ -24,12 +24,11 @@ class IndexController extends Controller {
     	$this->assign('detail_url',$this->detail_url);
         $this->display(); 
     }
-    public function detail(){
-    	$where['id']=I('get.id');
-    	$blog = M('blog');
-    	$blog_list =$blog->where($where)->find();
-    	$this->assign('blog_list',$blog_list) ;
+   /* public function detail(){
+        $where['id']=I('get.id');
+        $blog = M('blog');
+        $blog_list =$blog->where($where)->find();
         $this->display();
-    }
+    }*/
     
 }
