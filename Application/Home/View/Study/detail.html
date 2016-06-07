@@ -398,12 +398,9 @@
 			<div class="all_show">
 				<h2>栏目导航</h2>
 				<ul class="all_show_ul clearfix">
-					<li>心得笔记</li>
-					<li>IP查询</li>
-					<li>CSS3|Html5</li>
-					<li>网站建设</li>
-					<li>JS经典实例</li>
-					<li>推荐工具</li>
+					<foreach name="study" item="v">
+				    <li><a href="{:U('home/Study/index',array('categroy_id'=>$v['id']))}">{$v.name}</a></li>
+				    </foreach>
 				</ul>		
 			</div>
 			<div class="news">
