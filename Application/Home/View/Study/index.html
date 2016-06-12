@@ -11,7 +11,7 @@
 			</h1>
 		</header>
 		<article class="content_text clearfix">
-		<foreach name="log" item='vo'>
+		<foreach name="blog" item='vo'>
 			<section class="text_box">
 				<header>
 					<h2>
@@ -62,7 +62,7 @@
 					</p>
 				</h3>
 				<ul>
-				<foreach name="bl" item="v" key="k">
+				<foreach name="blog_new" item="v" key="k">
 					<li><a <?php if($k==0){echo 'class="first_li_a"';}?> href="">{$v.title}</a></li>
 					</foreach>		
 				</ul>
@@ -74,7 +74,7 @@
 					</p>
 				</h3>
 				<ul>					
-				<foreach name="blog" item="vo">
+				<foreach name="blog_hot" item="vo">
 						<li><a href="">{$vo.title}</a></li>
 				</foreach>
 				</ul>

@@ -35,16 +35,16 @@
 				</p>
 			</div>
 			<div class="nextinfo floatl">
-			    <?php if($blog_s['id']){?>
+			    <if condition="$blog_s['id'] gt 0">
 				<p>
-					上一篇： <a  href="{:U(home/study/detail,array('id'=>$blog_s['id']))}">{$blog_s['title']}</a>
+					上一篇： <a  href="{:U('home/study/detail',array('id'=>$blog_s['id']))}">{$blog_s['title']}</a>
 				</p>
-				<?php }?>
-				<?php if($blog_x['id']){?>
+				</if>
+				<if condition="$blog_x['id'] gt 0">
 				<p>
-					下一篇： <a href="{:U(home/study/detail,array('id'=>$blog_x['id']))}">{$blog_x['title']}</a>
+					下一篇： <a href="{:U('home/study/detail',array('id'=>$blog_x['id']))}">{$blog_x['title']}</a>
 				</p>
-				<?php }?>
+				</if>
 			</div>
 			<div class="otherlink floatl">
 				<div class="otherlink_header">
@@ -127,15 +127,16 @@
 			</div>
 		</div>
 		<div class="pinglun">
+		<foreach name='comment' item='vo'>
 			<div class="comments_content clearfix">
 				<div class="left_img">
 					<img src="./images/39630.jpg">
 				</div>
 				<div class="right_content">
-					<p class="name">yanbgh</p>
-					<p class="reply">博主你好！你的网站已提交到草录。链接地址http://ml.lmlblog.com/website/253.html</p>
+					<p class="name">{$vo.user_id}</p>
+					<p class="reply">{$vo.content}</p>
 					<p class="btn">
-						<span>2月24日</span>
+						<span>{$vo.create_time|date="m月d日",###}</span>
 						<span class="ding">&nbsp顶(29)</span>
 						<span class="share">&nbsp 转发
 							<span class="report">&nbsp 举报</span>
@@ -143,54 +144,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="comments_content clearfix">
-				<div class="left_img">
-					<img src="./images/39630.jpg">
-				</div>
-				<div class="right_content">
-					<p class="name">yanbgh</p>
-					<p class="reply">博主你好！你的网站已提交到草根站p://ml.lmlblog.com/website/253.html</p>
-					<p class="btn">
-						<span>2月24日</span>
-						<span class="ding">&nbsp顶(29)</span>
-						<span class="share">&nbsp 转发
-							<span class="report">&nbsp 举报</span>
-						</span>		
-					</p>
-				</div>
-			</div>
-			<div class="comments_content clearfix">
-				<div class="left_img">
-					<img src="./images/39630.jpg">
-				</div>
-				<div class="right_content">
-					<p class="name">yanbgh</p>
-					<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址ht/website/253.html</p>
-					<p class="btn">
-						<span>2月24日</span>
-						<span class="ding">&nbsp顶(29)</span>
-						<span class="share">&nbsp 转发
-							<span class="report">&nbsp 举报</span>
-						</span>		
-					</p>
-				</div>
-			</div>
-			<div class="comments_content clearfix">
-				<div class="left_img">
-					<img src="./images/39630.jpg">
-				</div>
-				<div class="right_content">
-					<p class="name">yanbgh</p>
-					<p class="reply">博主你好！你的网站已提交到草根站长目录。链接253.html</p>
-					<p class="btn">
-						<span>2月24日</span>
-						<span class="ding">&nbsp顶(29)</span>
-						<span class="share">&nbsp 转发
-							<span class="report">&nbsp 举报</span>
-						</span>		
-					</p>
-				</div>
-			</div>
+			</foreach>
 		</div>
 		<div class="weibo">
 				<div class="comments_content clearfix">
@@ -375,14 +329,14 @@
 		</div>
 		</div>
 	</div>
-		<form class="say_box clearfix">
+		<form class="say_box clearfix" action="{:U('home/study/add')}" method='post'>
 			<div class="clearfix">
 				<a href=""></a>
-				
-				<textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea>
+				<textarea name="content" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea>
 			</div>
 			<div class="fabu clearfix">
-				<input type="button" name="" value="发布">
+			    <input type="hidden" name="blog_id" value="{$blog_list.id}">
+				<input type="submit" name="" value="发布">
 			</div>
 			<p class="footer">
 				<a href="">
@@ -410,15 +364,9 @@
 					</p>
 				</h3>
 				<ul>
-					<li><a  class="first_li_a"href="">帝国cms首页、自定义页面如何实现分页</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【郑重申明】本站只提供静态模板下载！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
-					<li><a href="">【已评选】给我模板PSD源文件，我给你设计HTML！</a></li>
+				    <foreach name="blog_new" item="v" key="k">
+					<li><a <?php if($k==0){echo 'class="first_li_a"';}?>href="">{$v.title}</a></li>
+					</foreach>	
 				</ul>
 			</div>
 			<div class="rank">
@@ -428,15 +376,8 @@
 					</p>
 				</h3>
 				<ul>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
-					<li><a href="">情侣博客模板系列之《回忆》Html</a></li>
-					<li><a href="">响应式个人博客模板（蓝色清新）</a></li>
-					<li><a href="">个人博客模板《世界杯来袭》</a></li>
+				    <foreach name="blog_hot" item="vo">
+					<li><a href="">{$vo.title}</a></li>
 				</ul>
 			</div>
 			<div class="people share">
