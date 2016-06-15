@@ -1,0 +1,442 @@
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/pc/css/detail.css">
+<div class="content_box clearfix">
+	<article class="main_content clearfix">
+		<header>
+			<h1 class="green_content">
+				<a href="{:U(home/index/index)}" class="green_content_a1">网站首页</a><a href="{:U(home/study/index)}" class="green_content_a2">网站建设</a>
+				<span class="address">
+					<span>您当前的位置:</span>
+					<a href="">首页</a>>
+					<a href="">学无止境</a>>
+					<a href="">网站建设</a>
+				</span>
+			</h1>
+		</header>
+		<article class="content_text clearfix">
+			<section class="text_box">
+				<header>
+					<h1>
+						{$blog_list['title']}
+					</h1>
+					<p>
+						发布时间：{$blog_list['create_time']|date="Y-m-d",###}编辑：<a href="" class="yangqing">杨青</a>阅读（13819）
+					</p>
+			    </header>
+			    <!-- 小婊砸 你们在这里建div输入内容 -->
+			    <div>
+			    	{$blog_list['content']|htmlspecialchars_decode}
+			    </div>
+			</section>
+			<div class="keywords">
+				<p>
+					<span>关键字词：</span>
+					帝国cms,首页,自定义页面,分页
+				</p>
+			</div>
+			<div class="nextinfo floatl">
+			    <if condition="$blog_s['id'] gt 0">
+				<p>
+					上一篇： <a  href="{:U('home/study/detail',array('id'=>$blog_s['id']))}">{$blog_s['title']}</a>
+				</p>
+				</if>
+				<if condition="$blog_x['id'] gt 0">
+				<p>
+					下一篇： <a href="{:U('home/study/detail',array('id'=>$blog_x['id']))}">{$blog_x['title']}</a>
+				</p>
+				</if>
+			</div>
+			<div class="otherlink floatl">
+				<div class="otherlink_header">
+					<span>相关文章</span>
+				</div>
+				<ul class="clearfix"> 
+					<li><a href="">帝国cms常用标签调用方法总结（不得不收藏哦）</a></li>
+					<li><a href="">帝国cms怎样修改列表分页函数</a></li>
+				</ul>
+			</div>
+			<div class="top_comments">
+				<div class="comments_header">
+					被顶起来的评论
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="./images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding"><a href="">&nbsp顶(29)</a></span>
+							<span class="share">
+								<a href="">&nbsp 转发</a>
+								<span class="report"><a href="">&nbsp 举报</a></span>
+							</span>			
+						</p>
+					</div>
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="./images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding"><a href="">&nbsp顶(29)</a></span>
+							<span class="share">
+								<a href="">&nbsp 转发</a>
+								<span class="report"><a href="">&nbsp 举报</a></span>
+							</span>		
+						</p>
+					</div>
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="./images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding">&nbsp顶(29)</span>
+							<span class="share">&nbsp 转发
+								<span class="report">&nbsp 举报</span>
+							</span>		
+						</p>
+					</div>
+				</div>
+			</div>
+		<div class="comments_bottom clearfix">
+			<div class="comments_bottom_top">
+				<ul class="left_ul floatl">
+					<li class="li_bg li_pinglun">
+						<span>123</span>条评论
+					</li>
+					<li class="li_weibo"><span>10</span>条新浪微博</li>
+					<li class="li_tengxun"><span>8</span>条腾讯微博</li>
+				</ul>
+				<ul class="right_ul floatr">
+					<li><a href="javascript:void(0)">最早</a></li>
+					<li><a href="javascript:void(0)">最新</a></li>
+					<li><a href="javascript:void(0)">最热</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="pinglun">
+		<foreach name='comment' item='vo'>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">{$vo.user_id}</p>
+					<p class="reply">{$vo.content}</p>
+					<p class="btn">
+						<span>{$vo.create_time|date="m月d日",###}</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			</foreach>
+		</div>
+		<div class="weibo">
+				<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="tengxun">
+				<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="./images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="page clearfix">
+			<ul class="floatr clearfix">
+				<li class="clearfix"><a class="page_bg" href="javascript:void(0)">1</a></li>
+				<li><a href="javascript:void(0)">2</a></li>
+				<li><a href="javascript:void(0)">3</a></li>
+				<li><a href="javascript:void(0)">4</a></li>
+				<li><a href="javascript:void(0)">5</a></li>
+				<li><a href="javascript:void(0)">...</a></li>
+				<li><a href="javascript:void(0)">123</a></li>
+			</ul>
+		</div>
+		<div>
+			<div class="bottom_box clearfix">
+		<div class="shejiao">
+		社交帐号登录:
+		</div>
+		<div class="lcon_box ">
+			<ul class="clearfix">
+				<li class="lcon_1">
+					<a href="">微信</a>
+				</li>
+				<li class="lcon_2">
+					<a href="">微博</a>
+				</li>
+				<li class="lcon_3">
+					<a href="">QQ</a>
+				</li>
+				<li class="lcon_4">
+					<a href="">人人</a>
+				</li>
+				<a class="more">
+					更多»
+				</a>
+			</ul>
+			<ul id="ul1" class="ul_hidden">
+				<li class="lcon_5">
+					<a herf>豆瓣</a>
+				</li>
+				<li class="lcon_6">
+					<a herf>开心</a>
+				</li>
+				<li class="lcon_7">
+					<a herf>百度</a>
+				</li>
+				<li class="lcon_8">
+					<a herf>谷歌</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+		<form class="say_box clearfix" action="{:U('home/study/add')}" method='post'>
+			<div class="clearfix">
+				<a href=""></a>
+				<textarea name="content" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea>
+			</div>
+			<div class="fabu clearfix">
+			    <input type="hidden" name="blog_id" value="{$blog_list.id}">
+				<input type="submit" name="" value="发布">
+			</div>
+			<p class="footer">
+				<a href="">
+					杨青个人博客网站正在使用多说
+				</a>
+			</p>
+		</form>
+
+		
+
+		</article>
+		<div class="main_right floatr">
+			<div class="all_show">
+				<h2>栏目导航</h2>
+				<ul class="all_show_ul clearfix">
+					<foreach name="study" item="v">
+				    <li><a href="{:U('home/Study/index',array('categroy_id'=>$v['id']))}">{$v.name}</a></li>
+				    </foreach>
+				</ul>		
+			</div>
+			<div class="news">
+				<h3>
+					<p>
+						栏目<span>最新</span>
+					</p>
+				</h3>
+				<ul>
+				    <foreach name="blog_new" item="v" key="k">
+					<li><a <?php if($k==0){echo 'class="first_li_a"';}?>href="">{$v.title}</a></li>
+					</foreach>	
+				</ul>
+			</div>
+			<div class="rank">
+				<h3>
+					<p>
+						点击<span>排行</span>
+					</p>
+				</h3>
+				<ul>
+				    <foreach name="blog_hot" item="vo">
+					<li><a href="">{$vo.title}</a></li>
+				</ul>
+			</div>
+			<div class="people share">
+				<h3>
+					<p>
+						<span>最近访客</span>
+					</p>
+				</h3>
+				<p class="fangke_p2">
+				   <img src="./images/right_bottom.png">
+				</p>
+			</div>
+		</div>
+	</div>
+		</article>
+		</div>
+	
+</body>
+<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+
+			  $(".all_show>span>a").mouseover(function(){
+			  		$(this).removeClass("f_rotate")
+			 		$(this).addClass("rotate")
+			 	})
+			  $(".all_show>span>a").mouseout(function(){
+			 		$(this).removeClass("rotate")
+			 		$(this).addClass("f_rotate")
+			 	})
+			  $(".left_ul li").click(function(){
+				$(this).addClass("li_bg").siblings().removeClass("li_bg")
+			})
+			$(".right_ul li").click(function(){
+				$(this).children().addClass("color").parents().siblings().children().removeClass("color")
+			})
+			$(".page ul li a").click(function(){
+				$(this).addClass("page_bg").parents().siblings().children().removeClass("page_bg")
+			})
+			$(".li_weibo").click(function(){
+				$(".weibo").show().siblings(".pinglun").hide().siblings(".tengxun").hide();
+			})
+			$(".li_pinglun").click(function(){
+				$(".pinglun").show().siblings(".weibo").hide().siblings(".tengxun").hide();
+			})
+			$(".li_tengxun").click(function(){
+				$(".tengxun").show().siblings(".pinglun").hide().siblings(".weibo").hide();
+			})
+			$(".more").click(function(){
+			$("#ul1").toggleClass("ul_hidden")
+			})
+		})
+</script>

@@ -1,7 +1,10 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class StudyController extends Controller {
+class StudyController extends CommonController {
+    public function _initialize (){
+        parent::_initialize();
+    }
     public function index(){
        	$category = M('category');
         $blog=M('blog');

@@ -1,0 +1,59 @@
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/pc/css/suiyansuiyu.css">
+	<div class="content_box">
+		<article class="main_content clearfix">
+			<header>
+				<h1 class="green_content">
+					<a href="" class="green_content_a1">网站首页</a><a href="" class="green_content_a2">碎言碎语</a>
+					<span class="saying">
+						删删写写，回回忆忆，虽无法行云流水，却也可碎言碎语。
+					</span>
+				</h1>
+			</header>
+		</article>
+		<foreach name="gossip" item="vo">
+		<div class="mainBody">
+			<div class="mainBody_left">
+				<p class="clearfix">
+					<img src="__PUBLIC__/{$vo.pic}">
+					<span>{$vo.content}</span>
+				</p>
+				<div class="dot"></div>
+				<div class="dateview">{$vo.create_time|date="Y-m-d",###}</div>
+				<div class="triangle"></div>
+			</div>
+		</div>
+		</foreach>
+		         <div class="page">{$page}</div>
+      
+</div>
+<style>
+.page .current{background-color:rgba(0,255,150,0.5);}
+.page .prev,.num,.next,.current{width:auto;height:auto;margin:4px;padding:3px 3px;box-shadow:0 0 2px rgba(0,0,0,0.2);background-color:rgba(255,255,255,0.1);}
+</style>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+			$(".mainBody_left").mouseover(function(){
+				$(this).css({"background-color":"#dfdfdf","color":"#444"}).children(".triangle").show().siblings(".dot").css({"background":"#5ea51b"});
+			})	
+			$(".mainBody_left").mouseout(function(){
+			$(this).css({"background-color":"#f8f8f8","color":"#756f71"}).children(".triangle").hide().siblings(".dot").css({"background":"#ccccce"});
+			})
+		})
+</script>
+</body>
+</html>

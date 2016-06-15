@@ -1,7 +1,10 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class IndexController extends CommonController {
+    public function _initialize (){
+        parent::_initialize();
+    }
 	public $detail_url = array(
 		1 => array('controller'=>'Manlife','method'=>'detail'),
 		7 => array('controller'=>'Study','method'=>'detail'),

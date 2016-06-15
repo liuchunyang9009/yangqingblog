@@ -1,7 +1,10 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class ManlifeController extends Controller {
+class ManlifeController extends CommonController {
+    public function _initialize (){
+        parent::_initialize();
+    }
     public function index(){
     	$Images = M('category');
     	$blog=M('blog');

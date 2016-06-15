@@ -1,0 +1,154 @@
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/pc/css/shouye.css">
+	<div class="banner">
+		<div class="banner_mid clearfix">
+			<div class="text floatl">
+				<p>我们不停的翻弄着回忆</p>
+				<p>却再也找不回那时的自己</p>
+				<p>红尘一梦，不再追寻</p>
+			</div>
+			<div class="banner_mid_right floatr">
+				<a href="">
+					<img src="__PUBLIC__/home/images/photos2.jpg">
+				</a>
+				<a class="hide_qing" href="">
+					<p>杨青</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+		$(".banner_mid_right").mouseover(function(){
+			$(".hide_qing").stop().animate({"top":"97px"},150)
+		})
+		$(".banner_mid_right").mouseout(function(){
+			$(".hide_qing").stop().animate({"top":"130px"},150)
+		})
+	})
+	</script>
+	<div class="main clearfix">
+		<h2>
+			<p>文章<span>推荐</span></p>
+		</h2>
+		<div class="main_left">	
+		<foreach name='blog' item='vo'>
+		<div class="content floatl clearfix">
+			<h3 class="first_h3"><a href="">{$vo.title}</a></h3>
+			<div class="content_left floatl">
+				<img src="__PUBLIC__/{$vo.pic}" style="width:100%">
+			</div>
+			<div class="content_right floatl">
+				<p>
+					{$vo.description}
+				</p>
+				<a  class="read_all" href="{:U('home/'.$detail_url[$vo['parent_categroy_id']]['controller'].'/detail',array('id'=>$vo['id']))}">
+					阅读全文>>
+				</a>
+			</div>
+			<p class="content_footer">
+				<span>{$vo.create_time|date="Y-m-d",###}</span>
+				<span>作者：{$vo.author}</span>
+				<span>
+					个人博客:[
+					<a href="">{$categroy[$vo['categroy_id']]['name']}</a>
+					]
+				</span>
+			</p>
+		</div>
+		</foreach>
+	</div>
+	<div class="main_right floatr">
+			<div class="weather">
+				<img src="__PUBLIC__/home/images/weather.jpg">
+			</div>
+			<div class="news">
+				<h3>
+					<p>
+						最新<span>文章</span>
+					</p>
+				</h3>
+				<ul>
+				<foreach name='blog'  item='vo' key='k'>
+					<li><a  href="">{$vo.title}</a></li>
+			    </foreach>
+				</ul>
+			</div>
+			<div class="rank">
+				<h3>
+					<p>
+						模版<span>排行</span>
+					</p>
+				</h3>
+				<ul>
+					<foreach name='blog_is'  item='vo' key='k'>
+					<li><a href="">{$vo.title}</a></li>
+					</foreach>
+				</ul>
+			</div>
+			<div class="share">
+				<h3>
+					<p>
+						友情<span>链接</span>
+					</p>
+				</h3>
+				<div class="model">
+					<span>
+						<a href="">三维模型下载</a>
+					</span>
+				</div>
+				<div class="share_btn clearfix">
+					<ul class="clearfix">
+						<li>
+							<a href=""></a>
+						</li>
+						<li>
+							<a class="btn_qq" href=""></a>
+						</li>
+						<li>
+							<a class="btn_weibo" href=""></a>
+						</li>
+						<li>
+							<a class="btn_tqq" href=""></a>
+						</li>
+						<li>
+							<a class="btn_renren" href=""></a>
+						</li>
+						<li>
+							<a class="btn_weixin" href=""></a>
+						</li>
+					</ul>
+				</div>
+				<div class="code">
+					<p>
+					扫描二维码关注<span>杨青博客</span>官方微信账号
+					</p>
+					<a href=""><img src="__PUBLIC__/home/images/weixin.jpg"></a>
+				</div>
+			</div>
+		</div>
+		</div>
+	<div class="footer">
+		<p>
+			Design by DanceSmile <a href="">蜀ICP备11002373号-1</a> 
+		</p>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+		})
+</script>
+</body>
+</html>

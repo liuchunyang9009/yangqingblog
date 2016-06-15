@@ -1,0 +1,153 @@
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/pc/css/xuewuzhijing.css">
+<div class="content_box">
+	<article class="main_content clearfix">
+		<header>
+			<h1 class="green_content">
+				<a href="" class="green_content_a1">网站首页</a><a href="" class="green_content_a2">学无止境</a>
+				<span class="saying">
+					n像“草根”一样，紧贴着地面，低调的存在，冬去春来，枯荣无恙。
+				</span>
+			</h1>
+		</header>
+		<article class="content_text clearfix">
+		<foreach name="blog" item='vo'>
+			<section class="text_box">
+				<header>
+					<h2>
+						{$blog.title}
+					</h2>
+					<p>
+						<span>发布时间：{$vo.create_time|date="Y-m-d",###}作者：{$vo.author}</span>
+						[<a href="">{$study[$vo['categroy_id']]['name']}</a>]
+					</p>
+				</header>
+				<section class="content_main_text clearfix">
+					<a href="" class="left_img_box">
+						<img src="__PUBLIC__/{$vo.pic}" width="180px">
+					</a>
+					<p class="right_box">
+						{$vo.description}
+					</p>
+					<p class="right_button">
+						<span>
+						<a href="{:U('home/Study/detail',array('id'=>$vo['id']))}">
+							阅读全文
+						</a>
+						</span>
+					</p>
+				</section>
+			</section>
+			</foreach>	
+		</article>
+		<div class="main_right floatr">
+			<div>
+				<form>
+					<input type="" name="" placeholder="请输入关键字" class="input">
+					<span class="search">搜索</span>
+				</form>
+			</div>
+			<div class="all_show">
+				<h2>栏目导航</h2>
+				<ul class="all_show_ul clearfix">
+				<foreach name="study" item="v">
+				<li><a href="{:U('home/Study/index',array('categroy_id'=>$v['id']))}">{$v.name}</a>></li>
+				</foreach>
+				</ul>		
+			</div>
+			<div class="news">
+				<h3>
+					<p>
+						最新<span>文章</span>
+					</p>
+				</h3>
+				<ul>
+				<foreach name="blog_new" item="v" key="k">
+					<li><a <?php if($k==0){echo 'class="first_li_a"';}?> href="">{$v.title}</a></li>
+					</foreach>		
+				</ul>
+			</div>
+			<div class="rank">
+				<h3>
+					<p>
+						模版<span>排行</span>
+					</p>
+				</h3>
+				<ul>					
+				<foreach name="blog_hot" item="vo">
+						<li><a href="">{$vo.title}</a></li>
+				</foreach>
+				</ul>
+			</div>
+			<div class="your_interst-box">
+				<h3>
+					<p>
+						<span>猜你喜欢</span>
+					</p>
+				</h3>
+				<div class="your_interst_content">
+					<img src="__PUBLIC__/home/images/inter1.jpg">
+					
+					<img src="__PUBLIC__/home/images/inter2.jpg">
+					
+					<p class="inter_p">
+						<span>热门手机推荐</span>
+						<span>墙绘大师</span>
+					</p>
+					<img src="__PUBLIC__/home/images/inter1.jpg">
+					<img src="__PUBLIC__/home/images/inter2.jpg">
+					<p class="inter_p">
+						<span>热门手机推荐</span>
+						<span>墙绘大师</span>
+					</p>
+					<p class="inter_p3">
+						<span>
+							
+						</span>
+						<span>
+							
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="people share">
+				<h3>
+					<p>
+						<span>最近访客</span>
+					</p>
+				</h3>
+				<p class="fangke_p2">
+				   <img src="__PUBLIC__/home/images/right_bottom.png">
+				</p>
+			</div>
+		</div>
+	</article>
+</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+			$(".mainBody_left").mouseover(function(){
+				$(this).css({"background-color":"#dfdfdf","color":"#444"}).children(".triangle").show().siblings(".dot").css({"background":"#5ea51b"});
+			})	
+			$(".mainBody_left").mouseout(function(){
+			$(this).css({"background-color":"#f8f8f8","color":"#756f71"}).children(".triangle").hide().siblings(".dot").css({"background":"#ccccce"});
+			})
+			$(".page a:gt(0)").click(function(){
+				$(this).addClass("page_color").siblings().removeClass("page_color")
+			})
+		})
+</script>
+</html>

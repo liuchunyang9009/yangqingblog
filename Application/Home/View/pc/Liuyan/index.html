@@ -1,0 +1,399 @@
+<include file="Public/header" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/pc/css/liuyanban.css">
+	
+	<div class="content_box">
+		<article class="main_content clearfix">
+			<header>
+				<h1 class="green_content">
+					<a href="" class="green_content_a1">网站首页</a><a href="" class="green_content_a2">留言板</a>
+					<span class="saying">
+						你，生命中最重要的过客，之所以是过客，因为你未曾为我停留。
+					</span>
+				</h1>
+			</header>
+		</article>
+	</div>
+	<div class="main clearfix">
+		<div class="main_left clearfix">
+			<div class="top_comments">
+				<div class="comments_header">
+					被顶起来的评论
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="__PUBLIC__/home/pc/images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding"><a href="">&nbsp顶(29)</a></span>
+							<span class="share">
+								<a href="">&nbsp 转发</a>
+								<span class="report"><a href="">&nbsp 举报</a></span>
+							</span>			
+						</p>
+					</div>
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="__PUBLIC__/home/pc/images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding"><a href="">&nbsp顶(29)</a></span>
+							<span class="share">
+								<a href="">&nbsp 转发</a>
+								<span class="report"><a href="">&nbsp 举报</a></span>
+							</span>		
+						</p>
+					</div>
+				</div>
+				<div class="comments_content clearfix">
+					<div class="left_img">
+						<img src="__PUBLIC__/home/pc/images/39630.jpg">
+					</div>
+					<div class="right_content">
+						<p class="name">yanbgh</p>
+						<p class="reply">博主你好！你的网站已提交到草根站长目录。链接地址http://ml.lmlblog.com/website/253.html</p>
+						<p class="btn">
+							<span>2月24日</span>
+							<span class="ding">&nbsp顶(29)</span>
+							<span class="share">&nbsp 转发
+								<span class="report">&nbsp 举报</span>
+							</span>		
+						</p>
+					</div>
+				</div>
+			</div>
+		<div class="comments_bottom clearfix">
+			<div class="comments_bottom_top">
+				<ul class="left_ul floatl">
+					<li class="li_bg li_pinglun">
+						<span>123</span>条评论
+					</li>
+					<li class="li_weibo"><span>10</span>条新浪微博</li>
+					<li class="li_tengxun"><span>8</span>条腾讯微博</li>
+				</ul>
+				<ul class="right_ul floatr">
+					<li><a href="javascript:void(0)">最早</a></li>
+					<li><a href="javascript:void(0)">最新</a></li>
+					<li><a href="javascript:void(0)">最热</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="pinglun">
+		    <foreach name="liuyan" item='v'>
+			<div class="comments_content clearfix" rel="{$v.id}">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">{$v.user_id}</p>
+					<p class="reply">{$v.content}</p>
+					<p class="btn">
+						<span>{$v.create_time|date="m月d日",###}</span>
+						<span class="ding">顶：<span>{$v.top}</span></span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			</foreach>
+		</div>
+		<div class="weibo">
+				<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是新浪微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="tengxun">
+				<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博l</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+			<div class="comments_content clearfix">
+				<div class="left_img">
+					<img src="__PUBLIC__/home/pc/images/39630.jpg">
+				</div>
+				<div class="right_content">
+					<p class="name">yanbgh</p>
+					<p class="reply">我是腾讯微博</p>
+					<p class="btn">
+						<span>2月24日</span>
+						<span class="ding">&nbsp顶(29)</span>
+						<span class="share">&nbsp 转发
+							<span class="report">&nbsp 举报</span>
+						</span>		
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="page clearfix">
+			<ul class="floatr clearfix">
+				<li class="clearfix"><a class="page_bg" href="javascript:void(0)">1</a></li>
+				<li><a href="javascript:void(0)">2</a></li>
+				<li><a href="javascript:void(0)">3</a></li>
+				<li><a href="javascript:void(0)">4</a></li>
+				<li><a href="javascript:void(0)">5</a></li>
+				<li><a href="javascript:void(0)">...</a></li>
+				<li><a href="javascript:void(0)">123</a></li>
+			</ul>
+		</div>
+		<div>
+			<div class="bottom_box clearfix">
+	<div class="shejiao">
+		社交帐号登录:
+		</div>
+		<div class="lcon_box ">
+			<ul class="clearfix">
+				<li class="lcon_1">
+					<a href="">微信</a>
+				</li>
+				<li class="lcon_2">
+					<a href="">微博</a>
+				</li>
+				<li class="lcon_3">
+					<a href="">QQ</a>
+				</li>
+				<li class="lcon_4">
+					<a href="">人人</a>
+				</li>
+				<a class="more">
+					更多»
+				</a>
+			</ul>
+			<ul id="ul1" class="ul_hidden">
+				<li class="lcon_5">
+					<a herf>豆瓣</a>
+				</li>
+				<li class="lcon_6">
+					<a herf>开心</a>
+				</li>
+				<li class="lcon_7">
+					<a herf>百度</a>
+				</li>
+				<li class="lcon_8">
+					<a herf>谷歌</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+		<form class="say_box clearfix">
+			<div class="clearfix">
+				<a href=""></a>
+				
+				<textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea>
+			</div>
+			<div class="fabu clearfix">
+				<input type="button" name="" value="发布">
+			</div>
+			<p class="footer">
+				<a href="">
+					杨青个人博客网站正在使用多说
+				</a>
+			</p>
+		</form>
+		</div>
+		<aside class="right_bar">
+			<ul>
+				<li>网名：<a href="">DanceSmile</a>| 即步非烟</li>
+				<li>姓名：杨青</li>
+				<li>籍贯：四川省—成都市</li>
+				<li>现居：天津市—滨海新区</li>
+				<li>职业：网站设计、网站制作</li>
+				<li>副业：<a href="" style="color:#1CA368">进口休闲零食淘宝店</a></li>
+				<li>喜欢的书：《红与黑》《红楼梦》</li>
+				<li>喜欢的音乐：《burning》《just one last dance》《相思引》</li>
+				<li><img src="__PUBLIC__/home/pc/images/qq.png"></li>
+				<li><img src="__PUBLIC__/home/pc/images/mail.png"></li>
+				<li><img src="__PUBLIC__/home/pc/images/download.jpg"></li>
+			</ul>
+		</aside>
+	</div>
+	
+<script type="text/javascript">
+
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+			$(".mainBody_left").mouseover(function(){
+				$(this).css({"background-color":"#dfdfdf","color":"#444"}).children(".triangle").show().siblings(".dot").css({"background":"#5ea51b"});
+			})	
+			$(".mainBody_left").mouseout(function(){
+			$(this).css({"background-color":"#f8f8f8","color":"#756f71"}).children(".triangle").hide().siblings(".dot").css({"background":"#ccccce"});
+			})
+			$(".page a:gt(0)").click(function(){
+				$(this).addClass("page_color").siblings().removeClass("page_color")
+			})
+			$(".share").hover(function(){
+				$(this).children(".report").show()
+			},
+			function(){
+				$(this).children(".report").hide()
+			})
+			$(".left_ul li").click(function(){
+				$(this).addClass("li_bg").siblings().removeClass("li_bg")
+			})
+			$(".right_ul li").click(function(){
+				$(this).children().addClass("color").parents().siblings().children().removeClass("color")
+			})
+			$(".page ul li a").click(function(){
+				$(this).addClass("page_bg").parents().siblings().children().removeClass("page_bg")
+			})
+			$(".li_weibo").click(function(){
+				$(".weibo").show().siblings(".pinglun").hide().siblings(".tengxun").hide();
+			})
+			$(".li_pinglun").click(function(){
+				$(".pinglun").show().siblings(".weibo").hide().siblings(".tengxun").hide();
+			})
+			$(".li_tengxun").click(function(){
+				$(".tengxun").show().siblings(".pinglun").hide().siblings(".weibo").hide();
+			})
+			$(".more").click(function(){
+			$("#ul1").toggleClass("ul_hidden")
+		})
+		})
+	$(function(){
+		$('.ding').click(function(){
+			$this = $(this);
+			var num = $this.find('span').text();
+			var id = $this.closest('.comments_content').attr('rel');
+			$.ajax({
+				url:"{:U('home/liuyan/ajax')}",
+				data:{"num":num,"id":id},
+				type:"post",
+				dataType:"json",
+				success:function(data){
+					//console.log(data);
+					$this.find('span').text(data.nu);
+					//$('.first').html(b.name+'=>'+b.age);
+					//$('.ding').text(b.top);
+				}
+			});
+		})
+	})
+</script>
+</body>
+</html>

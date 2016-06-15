@@ -1,0 +1,71 @@
+<include file="Public/header" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/pc/css/about_me.css">
+<div class="content_box clearfix">
+		<header>
+			<h1 class="green_content">
+				<a href="" class="green_content_a1">网站首页</a><a href="" class="green_content_a2">关于我</a>
+				<span class="saying">
+					n像“草根”一样，紧贴着地面，低调的存在，冬去春来，枯荣无恙。
+				</span>
+			</h1>
+		</header>
+	<article class="main_content clearfix">
+		<article class="content_text clearfix">
+			<section class="text_box">
+				<header>
+					<h2>
+						IP要突破2000+了
+					</h2>
+					<p>
+						<span>发布时间：2016-05-20作者：杨青</span>
+						[<a href="">日记</a>]
+					</p>
+				</header>
+				<section class="content_main_text clearfix">
+					
+					<p class="right_box">
+					{$file['content']}
+					</p>
+				</section>
+			</section>
+			
+		</article>
+		
+			
+	</article>
+	
+		<aside class="right_bar ">
+			<ul>
+				<li>网名：{$file['webname']}</li>
+				<li>姓名：{$file['name']}</li>
+				<li>籍贯：{$file['address']}</li>
+				<li>现居：{$file['now_address']}</li>
+				<li>职业：{$file['job']}</li>
+				<li>副业：<a href="" style="color:#1CA368">{$file['sec_job']}</a></li>
+				<li>喜欢的书：{$file['love_book']}</li>
+				<li>喜欢的音乐：{$file['love_music']}</li>
+				<li><img src="__PUBLIC__/home/images/qq.png"></li>
+				<li><img src="__PUBLIC__/home/images/mail.png"></li>
+			</ul>
+		</aside>
+	
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+			 $(".top_ul>li>a").mouseover(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("bbb")
+			 	$(".show").eq(index).addClass("aaa")
+			})
+			  $(".top_ul>li>a").mouseout(function(){
+			 	var index = $(this).parent().index()
+			 	$(".show").eq(index).removeClass("aaa");
+			 	$(".show").eq(index).addClass("bbb")
+			})
+			$(".top_ul li a").click(function(){
+				$(this).addClass("color").parent().siblings().children().removeClass("color")
+			})
+		})
+</script>

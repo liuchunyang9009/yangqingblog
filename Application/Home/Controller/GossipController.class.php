@@ -1,8 +1,10 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class GossipController extends Controller {
-
+class GossipController extends CommonController {
+    public function _initialize (){
+        parent::_initialize();
+    }
     public function index(){
     	$Images = M('Doing'); // 实例
     /*	$list = $Images->select();*/
